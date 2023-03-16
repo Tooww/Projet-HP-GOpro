@@ -1,0 +1,41 @@
+# navigation.yml/Open GoPro, Version 2.0 (C) Copyright 2021 GoPro, Inc. (http://gopro.com/OpenGoPro).
+# This copyright was auto-generated on Wed, Sep  1, 2021  5:06:20 PM
+
+main:
+    - title: 'Home'
+      url: /
+    - title: 'BLE Spec'
+      url: /ble
+    - title: 'HTTP Spec'
+      url: /http
+    - title: 'Tutorials'
+      url: /tutorials
+    - title: 'Demos'
+      url: /demos
+    - title: 'FAQ'
+      url: /faq
+
+python-tutorials:
+    - title: '1: Connect BLE'
+      url: /tutorials/python/connect-ble
+    - title: '2: Send BLE Commands'
+      url: /tutorials/python/send-ble-commands
+    - title: '3: Parse BLE TLV Responses'
+      url: /tutorials/python/parse-ble-responses
+    - title: '4: BLE Queries'
+      url: /tutorials/python/ble-queries
+    - title: '5: Connect WiFi'
+      url: /tutorials/python/connect-wifi
+    - title: '6: Send WiFi Commands'
+      url: /tutorials/python/send-wifi-commands
+    - title: '7: Camera Media List'
+      url: /tutorials/python/camera-media-list
+
+specs:
+    - title: 'BLE 2.0'
+      url: /ble_2_0
+    - title: 'HTTP 2.0'
+      url: /http_2_0
+    - title: 'Protobuf'
+      url: /protos
+

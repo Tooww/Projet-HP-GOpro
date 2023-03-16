@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+# lance la connexion BLE et turn on le Wifi de la go pro 
+#python3 /home/tom/Projet-HP-GOpro/zMystuff/test_api_gopro_wifi_BLE_on.py
+
+
+while :
+do
+
+# change le wifi actuel pour le wifi de la go pro
+nmcli device wifi connect HERO10_Black
+
+
+
+# set shutter on (prend une photo si le preset est photo /!\ doit etre en mode photo pour nous)
+python3 /home/tom/Projet-HP-GOpro/zMystuff/copy_wifi_command_set_shutter.py
+
+sleep 2
+
+
+# telecharge la derniere photo 
+python3 /home/tom/Projet-HP-GOpro/zMystuff/copy_wifi_media_download_file.py
+
+sleep 2
+
+# change le wifi (pour etre connecté à internet)
+#nmcli device wifi connect CHALET
+
+# change le wifi DVIC
+nmcli device wifi connect PoleDeVinci_DVIC
+
+sleep 5
+done

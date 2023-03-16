@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+echo "hello world" >> /home/tom/Projet-HP-GOpro/log.log
