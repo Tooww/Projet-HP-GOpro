@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# vérifie si deux arguments sont passés en paramètre
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <nom_fichier_sortie> <fps>"
+    exit 1
+fi
+
 cd zPhoto
 
-ffmpeg -framerate 24 -pattern_type glob -i '*.jpg' -c:v libx264 -r 30 -pix_fmt yuv420p time-lapse.mp4
+# Utilisation des arguments passés en paramètres pour nommer le fichier de sortie et la fréquence d'images
+ffmpeg -framerate 24 -pattern_type glob -i '*.jpg' -c:v libx264 -r "$2" -pix_fmt yuv420p "$1"
