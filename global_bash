@@ -9,7 +9,7 @@ while :
 do
 
 # change le wifi actuel pour le wifi de la go pro
-nmcli device wifi connect HERO10_Black
+nmcli device wifi connect GP26364138
 
 
 
@@ -25,10 +25,10 @@ python3 /home/tom/Projet-HP-GOpro/zMystuff/copy_wifi_media_download_file.py
 sleep 2
 
 # change le wifi (pour etre connecté à internet)
-#nmcli device wifi connect CHALET
+nmcli device wifi connect CHALET
 
 # change le wifi DVIC
-nmcli device wifi connect PoleDeVinci_DVIC
+#nmcli device wifi connect PoleDeVinci_DVIC
 
 sleep 5
 done
