@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# vérifie si deux arguments sont passés en paramètre
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <nom_wifi> <duree_sleep>"
+    exit 1
+fi
+
 
 # lance la connexion BLE et turn on le Wifi de la go pro 
 #python3 /home/tom/Projet-HP-GOpro/zMystuff/test_api_gopro_wifi_BLE_on.py
@@ -25,10 +31,12 @@ python3 /home/tom/Projet-HP-GOpro/zMystuff/copy_wifi_media_download_file.py
 sleep 2
 
 # change le wifi (pour etre connecté à internet)
-nmcli device wifi connect CHALET
+nmcli device wifi connect "$1"
 
 # change le wifi DVIC
 #nmcli device wifi connect PoleDeVinci_DVIC
 
-sleep 5
+# attend la durée spécifiée en secondes
+sleep "$2"
+
 done
